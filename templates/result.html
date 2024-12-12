@@ -201,13 +201,43 @@
         </div>
     </div>
     {% endif %}
-    <div style="text-align: center; margin: 20px;">
+    <div id="callMe" style="text-align: center; margin: 20px;">
     <a href="#"
             style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; font-size: 16px;">
 
         📞
     </a>
 </div>
+     <script>
+    document.getElementById('callMe').addEventListener('click', function () {
+      // Prompt the user for a phone number
+      const phoneNumber = prompt("Enter your phone number:");
+
+      if (phoneNumber) {
+        // Alert the user with the entered phone number
+        alert(`You entered: ${phoneNumber}`);
+
+        // Construct the URL with the phone number
+        const url = `https://hook.eu2.make.com/ybrprym4urg89l31ucm4agw6fvzylnxg/?number=${encodeURIComponent(phoneNumber)}`;
+
+        // Send the GET request to the URL
+        fetch(url)
+          .then(response => {
+            if (response.ok) {
+              alert("Request sent successfully!");
+            } else {
+              alert("Failed to send the request.");
+            }
+          })
+          .catch(error => {
+            console.error("Error:", error);
+            alert("An error occurred while sending the request.");
+          });
+      } else {
+        alert("No phone number entered.");
+      }
+    });
+  </script>
 
 
 
