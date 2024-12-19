@@ -7,52 +7,106 @@
         <!-- Bootstrap CSS for responsive design and better styling -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
         <style>
-            body {
-                background-color: #f4f7fc;
-                font-family: 'Arial', sans-serif;
-            }
-            
-            .container {
-                margin-top: 50px;
-            }
-            .questionnaire-form {
-                background-color: white;
-                padding: 30px;
-                border-radius: 10px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            }
-            .questionnaire-form h2 {
-                text-align: center;
-                margin-bottom: 30px;
-            }
-            .form-group {
-                margin-bottom: 20px;
-            }
-            .form-group label {
-                font-weight: bold;
-            }
-            .btn-submit {
-                background-color: #007bff;
-                color: white;
-            }
-            .btn-submit:hover {
-                background-color: #0056b3;
-            }
-            .question-group input[type="radio"] {
-        margin-right: 10px; /* Space between radio buttons */
+body {
+    background: linear-gradient(135deg, #f4f7fc, #e3f2fd); /* Gradient background */
+    font-family: 'Arial', sans-serif;
+    color: #444; /* Default text color */
+    line-height: 1.6; /* Improve readability */
+}
+
+.container {
+    margin-top: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto; /* Center-align the container */
+}
+
+.questionnaire-form {
+    background: linear-gradient(135deg, #ffffff, #f9f9ff);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Animation */
+}
+
+.questionnaire-form:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.questionnaire-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #673ab7; /* Vibrant purple for headings */
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 1.1em; /* Slightly larger font size */
+    display: block;
+    margin-bottom: 8px; /* Space between label and input */
+    color: #3949ab; /* Blue for labels */
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Slight inner shadow */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff); /* Subtle gradient for fields */
+}
+
+.form-control:focus {
+    border-color: #03a9f4; /* Highlight on focus */
+    outline: none;
+    box-shadow: 0 0 8px rgba(3, 169, 244, 0.4); /* Glow effect */
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #03a9f4, #0288d1);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #0288d1, #01579b);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); /* Glow on hover */
+}
+
+.question-group {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #e1bee7; /* Light purple border */
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f3e5f5, #fce4ec); /* Colorful background */
+}
+
+.question-group input[type="radio"] {
+    margin-right: 10px; /* Space between radio buttons */
+}
+
+@media (max-width: 768px) {
+    .questionnaire-form {
+        padding: 20px;
     }
-    .question-group {
-        margin-bottom: 20px; /* Added space between question groups */
+    .btn-submit {
+        font-size: 1em;
+        padding: 10px;
     }
-              /* Ensure form looks good on mobile screens */
-        @media (max-width: 768px) {
-            .questionnaire-form {
-                padding: 20px;
-            }
-            .btn-submit {
-                font-size: 1em;
-            }
-        }
+}
+
         </style>
 </head>
 <body>
