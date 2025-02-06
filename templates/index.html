@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depression Assessment Questionnaire</title>
+        <!-- Bootstrap CSS for responsive design and better styling -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+body {
+    background: linear-gradient(135deg, #f4f7fc, #e3f2fd); /* Gradient background */
+    font-family: 'Arial', sans-serif;
+    color: #444; /* Default text color */
+    line-height: 1.6; /* Improve readability */
+}
+
+.container {
+    margin-top: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto; /* Center-align the container */
+}
+
+.questionnaire-form {
+    background: linear-gradient(135deg, #ffffff, #f9f9ff);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Animation */
+}
+
+.questionnaire-form:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.questionnaire-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #673ab7; /* Vibrant purple for headings */
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 1.1em; /* Slightly larger font size */
+    display: block;
+    margin-bottom: 8px; /* Space between label and input */
+    color: #3949ab; /* Blue for labels */
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Slight inner shadow */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff); /* Subtle gradient for fields */
+}
+
+.form-control:focus {
+    border-color: #03a9f4; /* Highlight on focus */
+    outline: none;
+    box-shadow: 0 0 8px rgba(3, 169, 244, 0.4); /* Glow effect */
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #03a9f4, #0288d1);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #0288d1, #01579b);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); /* Glow on hover */
+}
+
+.question-group {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #e1bee7; /* Light purple border */
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f3e5f5, #fce4ec); /* Colorful background */
+}
+
+.question-group input[type="radio"] {
+    margin-right: 10px; /* Space between radio buttons */
+}
+
+@media (max-width: 768px) {
+    .questionnaire-form {
+        padding: 20px;
+    }
+    .btn-submit {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
+
+        </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Depression Assessment Questionnaire</h1>
+        <form action="/" method="POST">
+            <h2>Mood Questionnaire</h2>
+            <div class="question-group">
+                <label>Q1: How often have you felt down, depressed, or hopeless? </label><br>
+                <input type="radio" name="Q1" value="1" required> Never
+                <input type="radio" name="Q1" value="2"> Occasionally
+                <input type="radio" name="Q1" value="3"> Sometimes
+                <input type="radio" name="Q1" value="4"> Often
+                <input type="radio" name="Q1" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q2: How often have you had little interest or pleasure in doing things? </label><br>
+                <input type="radio" name="Q2" value="1" required> Never
+                <input type="radio" name="Q2" value="2"> Occasionally
+                <input type="radio" name="Q2" value="3"> Sometimes
+                <input type="radio" name="Q2" value="4"> Often
+                <input type="radio" name="Q2" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q3: How often have you felt tired or had little energy? </label><br>
+                <input type="radio" name="Q3" value="1" required> Never
+                <input type="radio" name="Q3" value="2"> Occasionally
+                <input type="radio" name="Q3" value="3"> Sometimes
+                <input type="radio" name="Q3" value="4"> Often
+                <input type="radio" name="Q3" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q4: How often have you had trouble concentrating on things, such as reading or watching TV? </label><br>
+                <input type="radio" name="Q4" value="1" required> Never
+                <input type="radio" name="Q4" value="2"> Occasionally
+                <input type="radio" name="Q4" value="3"> Sometimes
+                <input type="radio" name="Q4" value="4"> Often
+                <input type="radio" name="Q4" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q5: How often have you felt like a failure or that you have let yourself or your family down? </label><br>
+                <input type="radio" name="Q5" value="1" required> Never
+                <input type="radio" name="Q5" value="2"> Occasionally
+                <input type="radio" name="Q5" value="3"> Sometimes
+                <input type="radio" name="Q5" value="4"> Often
+                <input type="radio" name="Q5" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q6: How often have you had trouble falling asleep, staying asleep, or sleeping too much? </label><br>
+                <input type="radio" name="Q6" value="1" required> Never
+                <input type="radio" name="Q6" value="2"> Occasionally
+                <input type="radio" name="Q6" value="3"> Sometimes
+                <input type="radio" name="Q6" value="4"> Often
+                <input type="radio" name="Q6" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q7: How often have you felt bad about yourself or that you are a failure, or have let yourself or your family down? </label><br>
+                <input type="radio" name="Q7" value="1" required> Never
+                <input type="radio" name="Q7" value="2"> Occasionally
+                <input type="radio" name="Q7" value="3"> Sometimes
+                <input type="radio" name="Q7" value="4"> Often
+                <input type="radio" name="Q7" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q8: How often have you felt that you are better off dead or of hurting yourself in some way? </label><br>
+                <input type="radio" name="Q8" value="1" required> Never
+                <input type="radio" name="Q8" value="2"> Occasionally
+                <input type="radio" name="Q8" value="3"> Sometimes
+                <input type="radio" name="Q8" value="4"> Often
+                <input type="radio" name="Q8" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q9: How often have you experienced irritability or frustration? </label><br>
+                <input type="radio" name="Q9" value="1" required> Never
+                <input type="radio" name="Q9" value="2"> Occasionally
+                <input type="radio" name="Q9" value="3"> Sometimes
+                <input type="radio" name="Q9" value="4"> Often
+                <input type="radio" name="Q9" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q10: How often have you felt nervous or anxious? </label><br>
+                <input type="radio" name="Q10" value="1" required> Never
+                <input type="radio" name="Q10" value="2"> Occasionally
+                <input type="radio" name="Q10" value="3"> Sometimes
+                <input type="radio" name="Q10" value="4"> Often
+                <input type="radio" name="Q10" value="5"> Always
+            </div>
+
+            <h2>Physical Questionnaire</h2>
+            <div class="question-group">
+                <label>Q11: How often have you experienced physical pain or discomfort? </label><br>
+                <input type="radio" name="Q11" value="1" required> Never
+                <input type="radio" name="Q11" value="2"> Occasionally
+                <input type="radio" name="Q11" value="3"> Sometimes
+                <input type="radio" name="Q11" value="4"> Often
+                <input type="radio" name="Q11" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q12: How often have you felt physically exhausted or drained? </label><br>
+                <input type="radio" name="Q12" value="1" required> Never
+                <input type="radio" name="Q12" value="2"> Occasionally
+                <input type="radio" name="Q12" value="3"> Sometimes
+                <input type="radio" name="Q12" value="4"> Often
+                <input type="radio" name="Q12" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q13: How often have you had headaches or migraines? </label><br>
+                <input type="radio" name="Q13" value="1" required> Never
+                <input type="radio" name="Q13" value="2"> Occasionally
+                <input type="radio" name="Q13" value="3"> Sometimes
+                <input type="radio" name="Q13" value="4"> Often
+                <input type="radio" name="Q13" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q14: How often have you experienced dizziness or light-headedness? </label><br>
+                <input type="radio" name="Q14" value="1" required> Never
+                <input type="radio" name="Q14" value="2"> Occasionally
+                <input type="radio" name="Q14" value="3"> Sometimes
+                <input type="radio" name="Q14" value="4"> Often
+                <input type="radio" name="Q14" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q15: How often have you felt stomach discomfort or nausea? </label><br>
+                <input type="radio" name="Q15" value="1" required> Never
+                <input type="radio" name="Q15" value="2"> Occasionally
+                <input type="radio" name="Q15" value="3"> Sometimes
+                <input type="radio" name="Q15" value="4"> Often
+                <input type="radio" name="Q15" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q16: How often have you experienced changes in appetite or weight? </label><br>
+                <input type="radio" name="Q16" value="1" required> Never
+                <input type="radio" name="Q16" value="2"> Occasionally
+                <input type="radio" name="Q16" value="3"> Sometimes
+                <input type="radio" name="Q16" value="4"> Often
+                <input type="radio" name="Q16" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q17: How often have you had trouble breathing or chest tightness? </label><br>
+                <input type="radio" name="Q17" value="1" required> Never
+                <input type="radio" name="Q17" value="2"> Occasionally
+                <input type="radio" name="Q17" value="3"> Sometimes
+                <input type="radio" name="Q17" value="4"> Often
+                <input type="radio" name="Q17" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q18: How often have you had trouble sleeping due to physical discomfort? </label><br>
+                <input type="radio" name="Q18" value="1" required> Never
+                <input type="radio" name="Q18" value="2"> Occasionally
+                <input type="radio" name="Q18" value="3"> Sometimes
+                <input type="radio" name="Q18" value="4"> Often
+                <input type="radio" name="Q18" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q19: How often have you experienced muscle tension or stiffness? </label><br>
+                <input type="radio" name="Q19" value="1" required> Never
+                <input type="radio" name="Q19" value="2"> Occasionally
+                <input type="radio" name="Q19" value="3"> Sometimes
+                <input type="radio" name="Q19" value="4"> Often
+                <input type="radio" name="Q19" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q20: How often have you experienced restlessness or an inability to relax? </label><br>
+                <input type="radio" name="Q20" value="1" required> Never
+                <input type="radio" name="Q20" value="2"> Occasionally
+                <input type="radio" name="Q20" value="3"> Sometimes
+                <input type="radio" name="Q20" value="4"> Often
+                <input type="radio" name="Q20" value="5"> Always
+            </div>
+
+            <h2>Cognitive Questionnaire</h2>
+            <div class="question-group">
+                <label>Q21: How often have you experienced difficulty focusing or concentrating on tasks? </label><br>
+                <input type="radio" name="Q21" value="1" required> Never
+                <input type="radio" name="Q21" value="2"> Occasionally
+                <input type="radio" name="Q21" value="3"> Sometimes
+                <input type="radio" name="Q21" value="4"> Often
+                <input type="radio" name="Q21" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q22: How often have you felt forgetful or had difficulty remembering things? </label><br>
+                <input type="radio" name="Q22" value="1" required> Never
+                <input type="radio" name="Q22" value="2"> Occasionally
+                <input type="radio" name="Q22" value="3"> Sometimes
+                <input type="radio" name="Q22" value="4"> Often
+                <input type="radio" name="Q22" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q23: How often have you felt mentally exhausted or drained? </label><br>
+                <input type="radio" name="Q23" value="1" required> Never
+                <input type="radio" name="Q23" value="2"> Occasionally
+                <input type="radio" name="Q23" value="3"> Sometimes
+                <input type="radio" name="Q23" value="4"> Often
+                <input type="radio" name="Q23" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q24: How often have you felt mentally confused or foggy? </label><br>
+                <input type="radio" name="Q24" value="1" required> Never
+                <input type="radio" name="Q24" value="2"> Occasionally
+                <input type="radio" name="Q24" value="3"> Sometimes
+                <input type="radio" name="Q24" value="4"> Often
+                <input type="radio" name="Q24" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q25: How often have you experienced difficulty making decisions? </label><br>
+                <input type="radio" name="Q25" value="1" required> Never
+                <input type="radio" name="Q25" value="2"> Occasionally
+                <input type="radio" name="Q25" value="3"> Sometimes
+                <input type="radio" name="Q25" value="4"> Often
+                <input type="radio" name="Q25" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q26: How often have you felt disconnected from reality or detached from your surroundings? </label><br>
+                <input type="radio" name="Q26" value="1" required> Never
+                <input type="radio" name="Q26" value="2"> Occasionally
+                <input type="radio" name="Q26" value="3"> Sometimes
+                <input type="radio" name="Q26" value="4"> Often
+                <input type="radio" name="Q26" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q27: How often have you felt indecisive or confused about everyday activities? </label><br>
+                <input type="radio" name="Q27" value="1" required> Never
+                <input type="radio" name="Q27" value="2"> Occasionally
+                <input type="radio" name="Q27" value="3"> Sometimes
+                <input type="radio" name="Q27" value="4"> Often
+                <input type="radio" name="Q27" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q28: How often have you felt overwhelmed by simple tasks or daily activities? </label><br>
+                <input type="radio" name="Q28" value="1" required> Never
+                <input type="radio" name="Q28" value="2"> Occasionally
+                <input type="radio" name="Q28" value="3"> Sometimes
+                <input type="radio" name="Q28" value="4"> Often
+                <input type="radio" name="Q28" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q29: How often have you felt distracted or unable to focus on conversations? </label><br>
+                <input type="radio" name="Q29" value="1" required> Never
+                <input type="radio" name="Q29" value="2"> Occasionally
+                <input type="radio" name="Q29" value="3"> Sometimes
+                <input type="radio" name="Q29" value="4"> Often
+                <input type="radio" name="Q29" value="5"> Always
+            </div>
+            <div class="question-group">
+                <label>Q30: How often have you felt mentally clear or alert? </label><br>
+                <input type="radio" name="Q30" value="1" required> Never
+                <input type="radio" name="Q30" value="2"> Occasionally
+                <input type="radio" name="Q30" value="3"> Sometimes
+                <input type="radio" name="Q30" value="4"> Often
+                <input type="radio" name="Q30" value="5"> Always
+            </div>
+            
+            <button type="submit">Submit Questionnaire</button>
+        </form>
+    </div>
+</body>
+</html>
